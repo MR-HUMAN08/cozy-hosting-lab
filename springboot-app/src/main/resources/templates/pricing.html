@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CozyHosting - Pricing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/"><i class="fas fa-cloud me-2"></i>CozyHosting</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light btn-sm ms-2 px-3" href="/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold">Pricing Plans</h1>
+            <p class="lead">Simple, transparent pricing for every stage of your business</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-header bg-white border-0 pt-5"><h4 class="fw-bold">Starter</h4><p class="text-muted">For personal projects</p></div>
+                        <div class="card-body">
+                            <div class="price mb-4"><span class="display-4 fw-bold">$2.99</span><span class="text-muted">/month</span></div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>1 Website</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>10 GB SSD Storage</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Unmetered Bandwidth</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Free SSL</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Weekly Backups</li>
+                                <li class="py-2"><i class="fas fa-times text-danger me-2"></i>Priority Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary btn-lg w-100">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-primary shadow text-center">
+                        <div class="card-header bg-primary text-white pt-5">
+                            <span class="badge bg-warning text-dark mb-2">Most Popular</span>
+                            <h4 class="fw-bold text-white">Professional</h4>
+                            <p class="text-white-50">For growing businesses</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="price mb-4"><span class="display-4 fw-bold">$9.99</span><span class="text-muted">/month</span></div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Unlimited Websites</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>50 GB NVMe Storage</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Unmetered Bandwidth</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Free SSL &amp; CDN</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Daily Backups</li>
+                                <li class="py-2"><i class="fas fa-check text-success me-2"></i>Priority Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-lg w-100">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-header bg-white border-0 pt-5"><h4 class="fw-bold">Enterprise</h4><p class="text-muted">For large-scale applications</p></div>
+                        <div class="card-body">
+                            <div class="price mb-4"><span class="display-4 fw-bold">$29.99</span><span class="text-muted">/month</span></div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Unlimited Websites</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>200 GB NVMe Storage</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Dedicated Resources</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Free SSL, CDN &amp; WAF</li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i>Real-time Backups</li>
+                                <li class="py-2"><i class="fas fa-check text-success me-2"></i>24/7 Dedicated Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary btn-lg w-100">Contact Sales</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><h5><i class="fas fa-cloud me-2"></i>CozyHosting</h5><p class="text-muted mb-0">Premium cloud hosting solutions since 2018.</p></div>
+                <div class="col-md-6 text-md-end"><p class="text-muted mb-0">&copy; 2024 CozyHosting. All rights reserved.</p></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
