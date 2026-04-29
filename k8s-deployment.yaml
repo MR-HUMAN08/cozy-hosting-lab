@@ -1,0 +1,93 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cozyhosting-ctf-lab
+  namespace: letushack-user-5
+  labels:
+    app: cozyhosting
+spec:
+  containers:
+  - name: cozyhosting
+    image: cozyhosting:latest  # Use your registry image
+    imagePullPolicy: Always
+    
+    ports:
+    - containerPort: 22
+      name: ssh
+    - containerPort: 80
+      name: http
+    
+    # ═══════════════════════════════════════════════════════
+    # REQUIRED: Linux Capabilities for sshd privsep & services
+    # ═══════════════════════════════════════════════════════
+    securityContext:
+      capabilities:
+        add:
+          - SYS_PTRACE      # Needed for process tracing/debugging
+          - SYS_CHROOT      # CRITICAL: sshd privsep chroots into /run/sshd
+          - CHOWN           # Allow changing file ownership
+          - SETUID          # Allow processes to change UID (for su, sudo)
+          - SETGID          # Allow processes to change GID
+          - DAC_OVERRIDE    # Allow bypassing file permissions
+          - FOWNER          # Allow changing file owner/perms without ownership
+          - AUDIT_WRITE     # Allow writing to audit log
+          - NET_BIND_SERVICE # Allow binding to ports < 1024
+    
+    env:
+    - name: FLAG
+      value: "flag{c0zy_h0st1ng_5pr1ng_b00t_pwn3d_2024}"
+    
+    resources:
+      requests:
+        cpu: "500m"
+        memory: "1Gi"
+      limits:
+        cpu: "2000m"
+        memory: "2Gi"
+    
+    volumeMounts:
+    - name: data
+      mountPath: /var/lib/postgresql
+  
+  volumes:
+  - name: data
+    emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cozyhosting-svc
+  namespace: letushack-user-5
+spec:
+  type: ClusterIP
+  selector:
+    app: cozyhosting
+  ports:
+  - port: 80
+    targetPort: 80
+    name: http
+  - port: 22
+    targetPort: 22
+    name: ssh
+
+---
+# For LoadBalancer/NodePort access
+apiVersion: v1
+kind: Service
+metadata:
+  name: cozyhosting-external
+  namespace: letushack-user-5
+spec:
+  type: NodePort
+  selector:
+    app: cozyhosting
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30080
+    name: http
+  - port: 22
+    targetPort: 22
+    nodePort: 30022
+    name: ssh

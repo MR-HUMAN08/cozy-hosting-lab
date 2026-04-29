@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  cozyhosting:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cozyhosting
+    hostname: cozyhosting
+    ports:
+      - "22:22"
+      - "80:80"
+    environment:
+      - POSTGRES_PASSWORD=Vg&nvzAQ7XxR
+      - FLAG
+    restart: unless-stopped
+    privileged: true
+    networks:
+      - cozynet
+
+networks:
+  cozynet:
+    driver: bridge

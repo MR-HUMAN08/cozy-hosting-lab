@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitelabel Error Page</title>
+    <style>
+        /* Spring Boot default whitelabel error page styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            margin: 40px;
+            background-color: #fff;
+        }
+        h1 {
+            font-weight: normal;
+            font-size: 24px;
+        }
+        p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Whitelabel Error Page</h1>
+    <p>This application has no explicit mapping for /error, so you are seeing this as a fallback.</p>
+    <div id="created">{{ timestamp }}</div>
+    <div>There was an unexpected error (type={{ error }}, status={{ status }}).</div>
+    {% if message %}
+    <div>{{ message }}</div>
+    {% endif %}
+</body>
+</html>

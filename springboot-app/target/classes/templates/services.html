@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CozyHosting - Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/"><i class="fas fa-cloud me-2"></i>CozyHosting</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light btn-sm ms-2 px-3" href="/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold">Our Services</h1>
+            <p class="lead">Comprehensive cloud hosting solutions for every need</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-server fa-3x text-primary mb-4"></i>
+                            <h4>Shared Hosting</h4>
+                            <p class="text-muted">Perfect for personal websites and small businesses.</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>10 GB SSD Storage</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unmetered Bandwidth</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Free SSL Certificate</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1-Click WordPress Install</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm border-primary">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-cube fa-3x text-primary mb-4"></i>
+                            <h4>VPS Hosting</h4>
+                            <p class="text-muted">Dedicated virtual resources for growing businesses.</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>50 GB NVMe Storage</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>4 GB RAM</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 vCPU Cores</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Full Root Access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-database fa-3x text-primary mb-4"></i>
+                            <h4>Dedicated Hosting</h4>
+                            <p class="text-muted">Maximum performance with dedicated hardware.</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>500 GB NVMe Storage</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>32 GB RAM</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>8 CPU Cores</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>DDoS Protection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-cloud fa-3x text-primary mb-4"></i>
+                            <h4>Cloud Hosting</h4>
+                            <p class="text-muted">Scalable cloud infrastructure that grows with your business.</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Auto-Scaling</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Load Balancing</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Multi-Region</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>99.99% SLA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-5">
+                            <i class="fab fa-wordpress fa-3x text-primary mb-4"></i>
+                            <h4>Managed WordPress</h4>
+                            <p class="text-muted">Optimized WordPress hosting with automatic updates.</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Auto Updates</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Built-in Caching</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Staging Environment</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Malware Scanning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-shield-halved fa-3x text-primary mb-4"></i>
+                            <h4>Security Suite</h4>
+                            <p class="text-muted">Comprehensive security solutions including WAF and IDS.</p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Web Application Firewall</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>IDS/IPS</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Daily Backups</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>24/7 Monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><h5><i class="fas fa-cloud me-2"></i>CozyHosting</h5><p class="text-muted mb-0">Premium cloud hosting solutions since 2018.</p></div>
+                <div class="col-md-6 text-md-end"><p class="text-muted mb-0">&copy; 2024 CozyHosting. All rights reserved.</p></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

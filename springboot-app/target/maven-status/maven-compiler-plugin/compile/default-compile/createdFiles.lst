@@ -1,0 +1,12 @@
+htb/cloudhosting/security/SessionFilter.class
+htb/cloudhosting/repository/UserRepository.class
+htb/cloudhosting/configuration/SecurityConfig.class
+htb/cloudhosting/scheduled/FakeUser.class
+htb/cloudhosting/security/SessionTracker.class
+htb/cloudhosting/CloudHostingApplication.class
+htb/cloudhosting/controller/ActuatorSessionsController.class
+htb/cloudhosting/model/User.class
+htb/cloudhosting/controller/IndexController.class
+htb/cloudhosting/controller/AdminController.class
+htb/cloudhosting/service/CustomUserDetailsService.class
+htb/cloudhosting/controller/LoginController.class
